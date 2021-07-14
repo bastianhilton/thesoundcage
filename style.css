@@ -1,11 +1,14 @@
 /*************** Main CSS *************/
+body {
+    margin: 0;
+}
+
 .audiofeed {
-    width: 1000px;
+    width: 200px;
     position: relative;
     top: 120px;
     height: auto;
     left: 40%;
-    right: 50%;
 }
 
 .audiofeed .speech {
@@ -62,10 +65,115 @@
       top: 10px;
   }
 
+  /******************** Profile Page *****************/
+
+  .profilebanner {
+      width: 100%;
+      height: 400px;
+      background-color: gray;
+      top: 0px;
+      position: relative;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+
+  .profileavatar {
+      border-radius: 75px;
+      border: 1px solid black;
+      width: 80px;
+      height: 80px;
+      left: 45%;
+      position: absolute;
+      top: 355px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+  }
+
+  .personalinfo {
+      position: absolute;
+      top: 345px;
+      width: 100%;
+  }
+
+  .personalinfo li {
+      display: inline-block;
+  }
+
+  .leftpersonal {
+      position: relative;
+      left: 20px;
+  }
+
+  .leftpersonal p {
+      font-size: 20px;
+  }
+
+  .rightpersonal {
+      float: right;
+      right: 20px;
+      position: relative;
+      top: -10px;
+  }
+
+  .rightpersonal li {
+    padding-right: 15px;
+  }
+
+  .followingnum, .followersnum, .recordingsnum {
+      font-weight: bold;
+      text-align: center;
+  }
+
+  .profilefeed {
+    width: 200px;
+    position: relative;
+    top: 120px;
+    height: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
   /******************** Responsive Designs *************/
+
+  @media only screen and (max-width: 700px){
+    .profileavatar {
+        left: 245px;
+        top: 20px;
+    }
+    .profilebanner {
+        height: 210px;
+    }
+
+    .personalinfo .leftpersonal {
+        top: -70px;
+        left: 235px;
+    }
+    .personalinfo {
+        top: 170px;
+    }
+
+    .personalinfo .rightpersonal {
+        right: 55px;
+    }
+
+    .followingnum, .followersnum, .recordingsnum {
+        top: -23px;
+        position: absolute;
+    }
+}
 
 @media only screen and (max-width: 500px){
     .audiofeed {
         left: 15%;
+    }
+
+    .profileavatar {
+        left: 210px
+    }
+
+    .personalinfo {
+        left: -35px;
     }
 }
